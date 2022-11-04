@@ -22,7 +22,7 @@ export default function Home() {
                     height={100}
                     className={styles.profile}
                 />
-                <p className="index-p">Rolling out soon</p>
+                <p className="index-p">Rolling out soon..</p>
             </main>
         </div>
     );
