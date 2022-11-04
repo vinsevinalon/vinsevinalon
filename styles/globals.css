@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, Roboto Mono, sans-serif;
-    min-width: 100vh;
+    max-width: 100vh;
 }
 
 a {
