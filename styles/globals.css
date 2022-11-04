@@ -4,6 +4,7 @@ body {
     margin: 0;
     font-family: -apple-system, Roboto Mono, sans-serif;
     overflow-x: hidden;
+    max-height: 600px;
 }
 
 body {
