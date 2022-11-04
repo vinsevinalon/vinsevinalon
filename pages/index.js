@@ -19,7 +19,7 @@ export default function Home() {
                   height={100}
                   className={styles.profile}
               />
-              <h6>Rolling out soon..</h6>
+              <h6>Rolling out soon.</h6>
           </main>
       </div>
   );
