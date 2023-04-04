@@ -20,7 +20,7 @@ export default function Home() {
                     className={styles.profile}
                 />
                 <br />
-                <p>Let's work!</p>
+                <p>Lets work!</p>
                 <br />
                 <p className="index-p about">
                     e-mail: vinsevinalon@gmail.com

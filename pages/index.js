@@ -22,7 +22,7 @@ export default function Home() {
                 <br/>
                 <p className="index-p about">
                     Hi, My name is Vinse Vinalon. <br />
-                    I'm a <strong>
+                    Im a <strong>
                         Full Stack Web / Shopify Engineer
                     </strong>{' '}
                     based in Metro Manila, Philippines
