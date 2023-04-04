@@ -21,7 +21,7 @@ export default function Home() {
                 />
                 <br/>
                 <p className="index-p about">
-                    Hi, My name is Vinse Vinalon. <br />
+                    Hi, My name is Vinse Viñalon. <br />
                     I&#39;m a <strong>
                         Full Stack Web / Shopify Engineer
                     </strong>{' '}
