@@ -1,16 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Navigation from './navigation/index.js';
 export default function Home() {
     return (
         <div className={styles.container}>
             <Head>
                 <title>Vinse Viñalon</title>
-                <meta
-                    name="description"
-                    content="Developed by Vinse Viñalon"
-                />
+                <meta name="description" content="Developed by Vinse Viñalon" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -22,7 +19,16 @@ export default function Home() {
                     height={100}
                     className={styles.profile}
                 />
-                <p className="index-p">Rolling out soon..</p>
+                <br/>
+                <p className="index-p about">
+                    Hi, My name is Vinse Vinalon. <br />
+                    I'm a <strong>
+                        Full Stack Web / Shopify Engineer
+                    </strong>{' '}
+                    based in Metro Manila, Philippines
+                </p>
+                <br />
+                <Navigation />
             </main>
         </div>
     );

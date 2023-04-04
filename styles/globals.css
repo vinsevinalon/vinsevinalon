@@ -1,10 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, Roboto Mono, sans-serif;
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
     max-height: auto;
 }
 
@@ -33,5 +35,13 @@ a {
 
 .index-p {
     font-size: .7rem;
-    letter-spacing: 0.1rem;
+}
+
+.about {
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.nav-item {
+    font-size: 0.7em;
 }
