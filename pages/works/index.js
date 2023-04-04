@@ -5,10 +5,13 @@ import kumu from '../../public/assets/kumu.png';
 import the from '../../public/assets/theclothing.png';
 import biyaheros from '../../public/assets/biyaheroes.png';
 import blumr from '../../public/assets/blumr.png';
+import auggie from '../../public/assets/auggiefontanilla.png';
+import distort from '../../public/assets/distort.png';
+import crimson from '../../public/assets/crimson.png';
 import Navigation from '../navigation/index.js';
 export default function Home() {
     return (
-        <div className='mx-10'>
+        <div className="mx-10">
             <Head>
                 <title>Vinse Viñalon - Works</title>
             </Head>
@@ -16,7 +19,7 @@ export default function Home() {
             <main className={styles.mainworks}>
                 <h1>WORKS</h1>
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-96">
+                    <div className="row-span-3 w-80">
                         <h1>www.kumu.live</h1>
                         <p className="italic text-xs">WEB ENGINEER II</p>
                         <p className="text-xs my-3">
@@ -76,7 +79,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-96">
+                    <div className="row-span-3 w-80">
                         <h1>www.theclothing-twpm.com</h1>
                         <p className="text-xs my-3">
                             THE Clothing is an independent local clothing brand.
@@ -111,7 +114,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-96">
+                    <div className="row-span-3 w-80">
                         <h1>www.biyaheroes.com</h1>
                         <p className="italic text-xs">SENIOR WEB DEVELOPER</p>
                         <p className="text-xs my-3">
@@ -133,28 +136,38 @@ export default function Home() {
                                 <strong>CONTRIBUTIONS</strong>
                             </p>
                             <li className="text-xs">
-                            My main focus for Biyaheroes is to develop and design the front-end application that will allow the user to engage more and have a smooth experience using the application. 
+                                My main focus for Biyaheroes is to develop and
+                                design the front-end application that will allow
+                                the user to engage more and have a smooth
+                                experience using the application.
                             </li>
                             <li className="text-xs">
-                            Implemented unit test cases for the every features and fixing the majority issues from every major browsers. 
+                                Implemented unit test cases for the every
+                                features and fixing the majority issues from
+                                every major browsers.
                             </li>
                             <li className="text-xs">
-                            Collaborating with the transport partners for customizing and executing the needed features for the dashboard. 
+                                Collaborating with the transport partners for
+                                customizing and executing the needed features
+                                for the dashboard.
                             </li>
                         </ul>
                     </div>
                     <br />
                     <p className="text-xs">
-                    TECH STACK : HTML, CSS, Javascript, AngularJS, NodeJS, MongoDB
+                        TECH STACK : HTML, CSS, Javascript, AngularJS, NodeJS,
+                        MongoDB
                     </p>
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-96">
+                    <div className="row-span-3 w-80">
                         <h1>www.blumr.com</h1>
                         <p className="italic text-xs">JUNIOR WEB DEVELOPER</p>
                         <p className="text-xs my-3">
-                        Blumr is a real-time video and messaging app allowing users its users to experience life as it happens and bringing them much closer to reality.
+                            Blumr is a real-time video and messaging app
+                            allowing users its users to experience life as it
+                            happens and bringing them much closer to reality.
                         </p>
                         <div className="col-span-2">
                             <Image
@@ -170,19 +183,131 @@ export default function Home() {
                                 <strong>CONTRIBUTIONS</strong>
                             </p>
                             <li className="text-xs">
-                            My role at Blumr is to develop and create new functionality that will enhance the user experience. 
+                                My role at Blumr is to develop and create new
+                                functionality that will enhance the user
+                                experience.
                             </li>
                             <li className="text-xs">
-                            Collaborating with Designers, QA’s and Back-End Developers for creating the major functionalities and submitting the necessary requirement for every features.
+                                Collaborating with Designers, QA’s and Back-End
+                                Developers for creating the major
+                                functionalities and submitting the necessary
+                                requirement for every features.
                             </li>
                             <li className="text-xs">
-                            Other roles I’ve experienced is fixing and debugging issues from the major browsers.
+                                Other roles I’ve experienced is fixing and
+                                debugging issues from the major browsers.
                             </li>
                         </ul>
                     </div>
                     <br />
                     <p className="text-xs">
-                    TECH STACK : HTML, CSS, Javascript, BackboneJS and NodeJS
+                        TECH STACK : HTML, CSS, Javascript, BackboneJS and
+                        NodeJS
+                    </p>
+                </div>
+                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <div className="grid grid-rows-3 justify-center px-15">
+                    <div className="row-span-3 w-80">
+                        <h1>www.auggiefontanilla.ph</h1>
+                        <p className="text-xs my-3">
+                            Auggie Fontanilla is a multi-faceted individual
+                            having experience in fields such as
+                            entrepreneurship, event and logistics, education and
+                            most notably art. He draws inspiration from icons of
+                            Americana tattoo, gangs and prison meshed with
+                            Filipino religious heritage.
+                        </p>
+                        <div className="col-span-2">
+                            <Image
+                                src={auggie}
+                                width={500}
+                                height={500}
+                                alt="auggiefontanilla"
+                            />
+                        </div>
+                        <br />
+                        <ul className="list-disc">
+                            <p className="text-xs">
+                                <strong>CONTRIBUTIONS</strong>
+                            </p>
+                            <li className="text-xs">
+                                Created a portfolio and e-commerce website to
+                                sell the clients artworks, merchandize and post
+                                the clients latest contents.
+                            </li>
+                        </ul>
+                    </div>
+                    <br />
+                    <p className="text-xs">
+                        TECH STACK : Shopify, Liquid, HTML, CSS, Javascript
+                    </p>
+                </div>
+                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <div className="grid grid-rows-3 justify-center px-15">
+                    <div className="row-span-3 w-80">
+                        <h1>www.distortmonsters.com</h1>
+                        <p className="text-xs my-3">
+                            Heavily influenced by elements of skateboarding, and
+                            punk rock, Distort Monsters is a street artist
+                            primarily known for his colorful characters with
+                            bold outlines and multilinear textures. His works
+                            are often narrative, and introspective in nature,
+                            with his monsters being a visual representation of
+                            his thoughts and emotions.
+                        </p>
+                        <div className="col-span-2">
+                            <Image
+                                src={distort}
+                                width={500}
+                                height={500}
+                                alt="distortmonsters"
+                            />
+                        </div>
+                        <br />
+                        <ul className="list-disc">
+                            <p className="text-xs">
+                                <strong>CONTRIBUTIONS</strong>
+                            </p>
+                            <li className="text-xs">
+                                Created a portfolio and e-commerce website to
+                                sell the clients artworks, merchandize and post
+                                the clients latest contents.
+                            </li>
+                        </ul>
+                    </div>
+                    <br />
+                    <p className="text-xs">
+                        TECH STACK : Shopify, Liquid, HTML, CSS, Javascript
+                    </p>
+                </div>
+                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <div className="grid grid-rows-3 justify-center px-15">
+                    <div className="row-span-3 w-80">
+                        <h1>www.crimsonrivertattoo.com</h1>
+                        <p className="text-xs my-3">
+                        Crimson River Tattoo is a private tattoo studio based in Quezon, City. The private studio focus on minimal and aesthetic tattoo design.
+                        </p>
+                        <div className="col-span-2">
+                            <Image
+                                src={crimson}
+                                width={500}
+                                height={500}
+                                alt="distortmonsters"
+                            />
+                        </div>
+                        <br />
+                        <ul className="list-disc">
+                            <p className="text-xs">
+                                <strong>CONTRIBUTIONS</strong>
+                            </p>
+                            <li className="text-xs">
+                                Created a customer booking system for the clients website. This feature is for all the customers that want to book a schedule for a tattoo service.
+                            </li>
+                        </ul>
+                    </div>
+                    <br />
+                    <p className="text-xs">
+                        TECH STACK : Shopify, Liquid, HTML, CSS, Javascript
                     </p>
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
