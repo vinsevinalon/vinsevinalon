@@ -9,6 +9,7 @@ import auggie from '../../public/assets/auggiefontanilla.png';
 import distort from '../../public/assets/distort.png';
 import crimson from '../../public/assets/crimson.png';
 import Navigation from '../navigation/index.js';
+
 export default function Home() {
     return (
         <div className="mx-10">
@@ -19,7 +20,7 @@ export default function Home() {
             <main className={styles.mainworks}>
                 <h1>WORKS</h1>
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-80">
+                    <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.kumu.live</h1>
                         <p className="italic text-xs">WEB ENGINEER II</p>
                         <p className="text-xs my-3">
@@ -79,7 +80,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-80">
+                    <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.theclothing-twpm.com</h1>
                         <p className="text-xs my-3">
                             THE Clothing is an independent local clothing brand.
@@ -114,7 +115,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-80">
+                    <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.biyaheroes.com</h1>
                         <p className="italic text-xs">SENIOR WEB DEVELOPER</p>
                         <p className="text-xs my-3">
@@ -161,7 +162,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-80">
+                    <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.blumr.com</h1>
                         <p className="italic text-xs">JUNIOR WEB DEVELOPER</p>
                         <p className="text-xs my-3">
@@ -207,7 +208,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-80">
+                    <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.auggiefontanilla.ph</h1>
                         <p className="text-xs my-3">
                             Auggie Fontanilla is a multi-faceted individual
@@ -244,7 +245,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-80">
+                    <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.distortmonsters.com</h1>
                         <p className="text-xs my-3">
                             Heavily influenced by elements of skateboarding, and
@@ -282,7 +283,7 @@ export default function Home() {
                 </div>
                 <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
-                    <div className="row-span-3 w-80">
+                    <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.crimsonrivertattoo.com</h1>
                         <p className="text-xs my-3">
                         Crimson River Tattoo is a private tattoo studio based in Quezon, City. The private studio focus on minimal and aesthetic tattoo design.
