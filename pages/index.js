@@ -19,7 +19,7 @@ export default function Home() {
                     height={100}
                     className={styles.profile}
                 />
-                <br/>
+                <br />
                 <p className="index-p about">
                     Hi, My name is Vinse Viñalon. <br />
                     I&#39;m a <strong>
@@ -28,6 +28,8 @@ export default function Home() {
                     based in Metro Manila, Philippines
                 </p>
                 <br />
+
+               
                 <Navigation />
             </main>
         </div>
