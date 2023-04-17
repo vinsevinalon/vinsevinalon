@@ -78,7 +78,7 @@ export default function Home() {
                         TECHNOLOGIES : HTML, CSS, Javascript, ReactJS and NodeJS
                     </p>
                 </div>
-                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.theclothing-twpm.com</h1>
@@ -113,7 +113,7 @@ export default function Home() {
                         TECHNOLOGIES : Shopify, Liquid, HTML, CSS, Javascript
                     </p>
                 </div>
-                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.biyaheroes.com</h1>
@@ -160,7 +160,7 @@ export default function Home() {
                         MongoDB
                     </p>
                 </div>
-                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.blumr.com</h1>
@@ -206,7 +206,7 @@ export default function Home() {
                         NodeJS
                     </p>
                 </div>
-                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.auggiefontanilla.ph</h1>
@@ -243,7 +243,7 @@ export default function Home() {
                         TECH STACK : Shopify, Liquid, HTML, CSS, Javascript
                     </p>
                 </div>
-                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.distortmonsters.com</h1>
@@ -281,7 +281,7 @@ export default function Home() {
                         TECH STACK : Shopify, Liquid, HTML, CSS, Javascript
                     </p>
                 </div>
-                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.crimsonrivertattoo.com</h1>
@@ -311,7 +311,7 @@ export default function Home() {
                         TECH STACK : Shopify, Liquid, HTML, CSS, Javascript
                     </p>
                 </div>
-                <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
             </main>
         </div>
     );

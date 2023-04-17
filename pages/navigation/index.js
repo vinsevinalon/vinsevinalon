@@ -3,10 +3,10 @@ import Link from 'next/link';
 // create an exported navigation component
 export default function Navigation() {
     const handleClickLinkedIn = () => {
-        window.location.href = 'https://www.linkedin.com/in/vinsevinalon/'; 
+        window.location.href = 'https://www.linkedin.com/in/vinsevinalon/';
     };
     const handleClickGithub = () => {
-        window.location.href = 'https://github.com/vinsevinalon'; 
+        window.location.href = 'https://github.com/vinsevinalon';
     };
     const handleClickCodeCademy = () => {
         window.location.href = 'https://www.codecademy.com/profiles/vinsevinalon'; 
@@ -30,7 +30,8 @@ export default function Navigation() {
                         <svg
                             onClick={handleClickLinkedIn}
                             xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
+                            className="h-5 w-5"
+                            alt="linkedin"
                             fill="#A9a9a9"
                             viewBox="0 0 24 24"
                         >
@@ -41,7 +42,8 @@ export default function Navigation() {
                         <svg
                             onClick={handleClickGithub}
                             xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
+                            className="h-5 w-5"
+                            alt="github"
                             fill="#A9a9a9"
                             viewBox="0 0 24 24"
                         >
@@ -52,7 +54,8 @@ export default function Navigation() {
                         <svg
                             onClick={handleClickCodeCademy}
                             fill="#A9a9a9"
-                            class="h-5 w-5"
+                            className="h-5 w-5"
+                            alt="codecademy"
                             viewBox="0 0 24 24"
                             role="img"
                             xmlns="http://www.w3.org/2000/svg"
