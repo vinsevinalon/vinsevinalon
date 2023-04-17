@@ -30,7 +30,7 @@ export default function Navigation() {
                         <svg
                             onClick={handleClickLinkedIn}
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="h-5 w-5 social-icon hover:fill-current"
                             alt="linkedin"
                             fill="#A9a9a9"
                             viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ export default function Navigation() {
                         <svg
                             onClick={handleClickGithub}
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="h-5 w-5 social-icon hover:fill-current"
                             alt="github"
                             fill="#A9a9a9"
                             viewBox="0 0 24 24"
@@ -54,7 +54,7 @@ export default function Navigation() {
                         <svg
                             onClick={handleClickCodeCademy}
                             fill="#A9a9a9"
-                            className="h-5 w-5"
+                            className="h-5 w-5 social-icon hover:fill-current"
                             alt="codecademy"
                             viewBox="0 0 24 24"
                             role="img"

@@ -45,3 +45,7 @@ a {
 .nav-item {
     font-size: 0.7em;
 }
+
+.social-icon {
+    cursor: pointer;
+}
