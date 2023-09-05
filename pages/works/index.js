@@ -42,7 +42,7 @@ export default function Home() {
                                 <strong>CONTRIBUTIONS</strong>
                             </p>
                             <li className="text-xs">
-                            Led the conceptualization, design, and development of the brand's official webstore, driving a seamless online shopping experience for customers. Leveraged cutting-edge technologies and industry best practices to ensure a user-friendly interface and responsive design, resulting in increased online sales and improved brand visibility.
+                            Led the conceptualization, design, and development of the brands official webstore, driving a seamless online shopping experience for customers. Leveraged cutting-edge technologies and industry best practices to ensure a user-friendly interface and responsive design, resulting in increased online sales and improved brand visibility.
                             </li>
                             <li className="text-xs">
                             Responsible for the comprehensive development of the webstore, including prototyping and creating mock-ups to visualize the entire workflow. Executed the design, build, and rigorous testing phases to ensure a robust webstore. Oversaw the deployment process for each feature, ensuring seamless functionality.
