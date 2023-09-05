@@ -8,6 +8,7 @@ import blumr from '../../public/assets/blumr.png';
 import auggie from '../../public/assets/auggiefontanilla.png';
 import distort from '../../public/assets/distort.png';
 import crimson from '../../public/assets/crimson.png';
+import highminds from '../../public/assets/highminds.png'
 import Navigation from '../navigation/index.js';
 
 export default function Home() {
@@ -19,6 +20,46 @@ export default function Home() {
             <Navigation />
             <main className={styles.mainworks}>
                 <h1>WORKS</h1>
+                <div className="grid grid-rows-3 justify-center px-15">
+                    <div className="row-span-3 w-96 max-sm:w-80">
+                        <h1>www.hghmnds.ph</h1>
+                        <p className="italic text-xs">FREELANCE</p>
+                        <p className="text-xs my-3">
+                        Highminds Clothing is a prominent streetwear brand based in the Philippines, renowned for its trendsetting designs and commitment to producing high-quality merchandise. The brand has gained significant recognition for its extensive collaborations and is actively expanding its retail footprint with multiple stores nationwide.
+                        </p>
+                        <div className="col-span-2">
+                            <Image
+                                src={highminds}
+                                width={500}
+                                height={500}
+                                alt="kumu"
+                            />
+                        </div>
+                        <br />
+                        <ul className="list-disc">
+                            <p className="text-xs">
+                                <strong>CONTRIBUTIONS</strong>
+                            </p>
+                            <li className="text-xs">
+                            Led the conceptualization, design, and development of the brand's official webstore, driving a seamless online shopping experience for customers. Leveraged cutting-edge technologies and industry best practices to ensure a user-friendly interface and responsive design, resulting in increased online sales and improved brand visibility.
+                            </li>
+                            <li className="text-xs">
+                            Responsible for the comprehensive development of the webstore, including prototyping and creating mock-ups to visualize the entire workflow. Executed the design, build, and rigorous testing phases to ensure a robust webstore. Oversaw the deployment process for each feature, ensuring seamless functionality.
+                            </li>
+                            <li className="text-xs">
+                            Successfully integrated both local and international shipping options, establishing efficient logistics for a global customer base. Constructed versatile payment gateways catering to both local and international customers, facilitating secure and convenient transactions. Seamlessly integrated all social media and marketing platforms into the Shopify dashboard to streamline brand promotion and customer engagement.
+                            </li>
+                            <li className="text-xs">
+                            Generated and structured analytics and sales reports. Organized product categories and information for easy navigation. Ensured accessibility on both mobile and desktop devices.
+                            </li>
+                        </ul>
+                    </div>
+                    <br />
+                    <p className="text-xs">
+                        TECHNOLOGIES : HTML, CSS, Javascript, ReactJS and Shopify
+                    </p>
+                </div>
+                <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-" />
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.kumu.live</h1>
