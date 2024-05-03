@@ -24,7 +24,7 @@ export default function Home() {
                 <div className="grid grid-rows-3 justify-center px-15">
                     <div className="row-span-3 w-96 max-sm:w-80">
                         <h1>www.hghmnds.ph</h1>
-                        <p className="italic text-xs">FREELANCE</p>
+                        <p className="italic text-xs">SHOPIFY DEVELOPER / DESIGNER</p>
                         <p className="text-xs my-3">
                         Highminds Clothing is a prominent streetwear brand based in the Philippines, renowned for its trendsetting designs and commitment to producing high-quality merchandise. The brand has gained significant recognition for its extensive collaborations and is actively expanding its retail footprint with multiple stores nationwide.
                         </p>
