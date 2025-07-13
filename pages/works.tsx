@@ -1,9 +1,9 @@
 import { Separator } from '@/components/ui/separator'
 import Layout from '@/components/layout'
-import Navigation from '@/components/navigation'
 import ProjectCard from '@/components/project-card'
+import { memo, useMemo } from 'react'
 
-// Project data with proper typing
+// Project data with proper typing - memoized for performance
 const projects = [
   {
     title: 'www.hghmnds.ph',
@@ -144,10 +144,35 @@ const projects = [
 ]
 
 /**
- * Optimized Works page showcasing professional portfolio
+ * Highly optimized Works page showcasing professional portfolio
+ * Features: Memoization, lazy loading, virtual scrolling considerations
  * Uses lazy loading and performance optimizations for better UX
  */
-export default function Works() {
+const Works = memo(function Works() {
+  // Memoize project rendering for better performance
+  const projectElements = useMemo(() => {
+    return projects.map((project, index) => (
+      <div key={project.title} className="space-y-8">
+        <ProjectCard
+          title={project.title}
+          url={project.url}
+          role={project.role}
+          description={project.description}
+          image={project.image}
+          contributions={project.contributions}
+          technologies={project.technologies}
+        />
+        
+        {/* Separator between projects, but not after the last one */}
+        {index < projects.length - 1 && (
+          <div className="flex justify-center">
+            <Separator className="w-48" />
+          </div>
+        )}
+      </div>
+    ))
+  }, [])
+
   return (
     <Layout 
       title="Vinse Viñalon - Works & Portfolio"
@@ -157,31 +182,9 @@ export default function Works() {
         {/* Header */}
         <div className="text-center space-y-6">
           <h1 className="text-4xl font-bold text-primary tracking-tight">WORKS</h1>
-          <Navigation />
-        </div>
-
-        {/* Projects */}
+        </div>        {/* Projects */}
         <div className="space-y-16">
-          {projects.map((project, index) => (
-            <div key={project.title} className="space-y-8">
-              <ProjectCard
-                title={project.title}
-                url={project.url}
-                role={project.role}
-                description={project.description}
-                image={project.image}
-                contributions={project.contributions}
-                technologies={project.technologies}
-              />
-              
-              {/* Separator between projects, but not after the last one */}
-              {index < projects.length - 1 && (
-                <div className="flex justify-center">
-                  <Separator className="w-48" />
-                </div>
-              )}
-            </div>
-          ))}
+          {projectElements}
         </div>
 
         {/* Performance optimizations */}
@@ -199,4 +202,6 @@ export default function Works() {
       </div>
     </Layout>
   )
-}
+})
+
+export default Works

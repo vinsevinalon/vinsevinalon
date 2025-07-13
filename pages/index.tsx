@@ -1,13 +1,13 @@
-import Image from 'next/image'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import Layout from '@/components/layout'
-import Navigation from '@/components/navigation'
+import { memo } from 'react'
 
 /**
- * Optimized Homepage component with improved performance and accessibility
+ * Highly optimized Homepage component with improved performance and accessibility
+ * Features: Memoization, optimized images, and efficient re-rendering
  * Uses Next.js Image optimization and ShadCN UI components
  */
-export default function Home() {
+const Home = memo(function Home() {
   return (
     <Layout 
       title="Vinse Viñalon - Full Stack Web Developer"
@@ -22,6 +22,7 @@ export default function Home() {
               src="/earth.png" 
               alt="Vinse Viñalon profile picture"
               className="object-cover"
+              loading="eager"
             />
             <AvatarFallback className="text-xl font-semibold">VV</AvatarFallback>
           </Avatar>
@@ -44,9 +45,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Navigation */}
-        <Navigation />
-
         {/* Performance optimizations */}
         <div className="sr-only">
           {/* Preload critical images */}
@@ -55,4 +53,6 @@ export default function Home() {
       </div>
     </Layout>
   )
-}
+})
+
+export default Home

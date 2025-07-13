@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { memo } from 'react'
 import { Badge } from '@/components/ui/badge'
 import {
   Card,
@@ -22,10 +23,11 @@ interface ProjectCardProps {
 }
 
 /**
- * Reusable ProjectCard component for displaying work portfolio items
+ * Highly optimized ProjectCard component for displaying work portfolio items
+ * Features: Memoization, lazy loading, progressive image enhancement
  * Optimized for performance with proper image loading and accessibility
  */
-export default function ProjectCard({
+const ProjectCard = memo(function ProjectCard({
   title,
   url,
   role,
@@ -45,15 +47,19 @@ export default function ProjectCard({
       </CardHeader>
 
       <CardContent className="space-y-6">
-        {/* Project Image */}
-        <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
+        {/* Optimized Project Image with progressive loading */}
+        <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden bg-muted">
           <Image
             src={image.src}
             alt={image.alt}
             fill
-            className="object-cover transition-transform hover:scale-105"
+            className="object-cover transition-transform hover:scale-105 duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={false}
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Kic6LbRWa8N2rEmFBB/9k="
+            quality={85}
           />
         </div>
 
@@ -84,4 +90,6 @@ export default function ProjectCard({
       </CardContent>
     </Card>
   )
-}
+})
+
+export default ProjectCard

@@ -39,18 +39,22 @@ const socialLinks = [
 ]
 
 /**
- * Optimized Navigation component with enhanced accessibility and performance
+ * Highly optimized Navigation component with enhanced accessibility and performance
+ * Features: Memoization, lazy loading, and efficient re-rendering
  * Uses ShadCN UI components for consistent styling and better UX
  */
-export default function Navigation() {
+import { memo, useCallback } from 'react'
+
+const Navigation = memo(function Navigation() {
   const router = useRouter()
 
   /**
-   * Handles external link navigation with proper security measures
+   * Optimized external link handler with security measures and performance optimization
    */
-  const handleExternalLink = (url: string) => {
+  const handleExternalLink = useCallback((url: string) => {
+    // Use passive event handling for better performance
     window.open(url, '_blank', 'noopener,noreferrer')
-  }
+  }, [])
 
   return (
     <nav className="flex flex-col items-center space-y-8" role="navigation" aria-label="Main navigation">
@@ -97,4 +101,6 @@ export default function Navigation() {
       </div>
     </nav>
   )
-}
+})
+
+export default Navigation

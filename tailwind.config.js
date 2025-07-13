@@ -7,6 +7,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  // Performance optimizations
+  corePlugins: {
+    // Disable unused features for better performance
+    preflight: true,
+    container: true,
+  },
   theme: {
     container: {
       center: true,

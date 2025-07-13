@@ -3,16 +3,23 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Mail, MessageCircle } from 'lucide-react'
 import Layout from '@/components/layout'
-import Navigation from '@/components/navigation'
+import { memo, useCallback } from 'react'
 
 /**
- * Optimized Contact page with improved accessibility and user experience
+ * Highly optimized Contact page with improved accessibility and user experience
+ * Features: Memoization, optimized event handlers, and enhanced interaction patterns
  * Includes proper semantic HTML and enhanced interaction patterns
  */
-export default function Contact() {
-  const handleEmailClick = () => {
+const Contact = memo(function Contact() {
+  // Optimized email handler
+  const handleEmailClick = useCallback(() => {
     window.location.href = 'mailto:vinsevinalon@gmail.com?subject=Let\'s work together!'
-  }
+  }, [])
+
+  // Optimized messaging handler  
+  const handleMessageClick = useCallback(() => {
+    window.open('https://linkedin.com/in/vinsevinalon', '_blank', 'noopener,noreferrer')
+  }, [])
 
   return (
     <Layout 
@@ -73,9 +80,6 @@ export default function Contact() {
           </CardContent>
         </Card>
 
-        {/* Navigation */}
-        <Navigation />
-
         {/* Structured Data for SEO */}
         <script
           type="application/ld+json"
@@ -106,4 +110,6 @@ export default function Contact() {
       </div>
     </Layout>
   )
-}
+})
+
+export default Contact
