@@ -1,7 +1,7 @@
 import { Separator } from '@/components/ui/separator'
 import Layout from '@/components/layout'
 import ProjectCard from '@/components/project-card'
-import { memo, useMemo } from 'react'
+import { memo, useMemo, useEffect, useState } from 'react'
 
 // Project data with proper typing - memoized for performance
 const projects = [
@@ -149,10 +149,27 @@ const projects = [
  * Uses lazy loading and performance optimizations for better UX
  */
 const Works = memo(function Works() {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  // Trigger animation after component mounts
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
   // Memoize project rendering for better performance
   const projectElements = useMemo(() => {
     return projects.map((project, index) => (
-      <div key={project.title} className="space-y-8">
+      <div 
+        key={project.title} 
+        className={`space-y-8 transition-all duration-700 ${
+          isLoaded 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-8'
+        }`}
+        style={{
+          transitionDelay: `${index * 100}ms`
+        }}
+      >
         <ProjectCard
           title={project.title}
           url={project.url}
@@ -166,12 +183,12 @@ const Works = memo(function Works() {
         {/* Separator between projects, but not after the last one */}
         {index < projects.length - 1 && (
           <div className="flex justify-center">
-            <Separator className="w-48" />
+            <Separator className="w-48 opacity-50" />
           </div>
         )}
       </div>
     ))
-  }, [])
+  }, [isLoaded])
 
   return (
     <Layout 
@@ -180,9 +197,20 @@ const Works = memo(function Works() {
     >
       <div className="space-y-12">
         {/* Header */}
-        <div className="text-center space-y-6">
+        <div className={`text-center space-y-6 transition-all duration-1000 ${
+          isLoaded 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 -translate-y-4'
+        }`}>
           <h1 className="text-4xl font-bold text-primary tracking-tight">WORKS</h1>
-        </div>        {/* Projects */}
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            A curated collection of my professional projects spanning e-commerce, social platforms, 
+            creative tools, and digital experiences. Each project represents a unique challenge 
+            and innovative solution.
+          </p>
+        </div>
+        
+        {/* Projects */}
         <div className="space-y-16">
           {projectElements}
         </div>
