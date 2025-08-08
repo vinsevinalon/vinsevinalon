@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import { ReactNode, useEffect } from 'react'
-import { initStagewiseToolbar } from '@/lib/stagewise-init'
+import { ReactNode } from 'react'
 import Navigation from '@/components/navigation'
 
 interface LayoutProps {
@@ -30,23 +29,6 @@ export default function Layout({
   canonical,
   ogImage = '/earth.png'
 }: LayoutProps) {
-  // Initialize stagewise toolbar safely on client-side with performance optimization
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Use requestIdleCallback for non-critical tasks
-      if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(() => {
-          initStagewiseToolbar()
-        })
-      } else {
-        // Fallback for browsers without requestIdleCallback
-        setTimeout(() => {
-          initStagewiseToolbar()
-        }, 100)
-      }
-    }
-  }, [])
-
   return (
     <>
       <Head>
@@ -112,8 +94,6 @@ export default function Layout({
         <main className="container mx-auto px-4 py-8">
           {children}
         </main>
-        
-        {/* Stagewise Toolbar is loaded via initStagewiseToolbar function */}
       </div>
     </>
   )
