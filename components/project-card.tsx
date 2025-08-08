@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { memo, useState, useEffect } from 'react'
+import { memo, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import {
@@ -24,9 +24,9 @@ interface ProjectCardProps {
 }
 
 /**
- * Highly optimized ProjectCard component for displaying work portfolio items
- * Features: Memoization, lazy loading, progressive image enhancement, clickable images
- * Optimized for performance with proper image loading and accessibility
+ * Optimized ProjectCard component for displaying work portfolio items
+ * Features: Memoization, lazy loading, progressive image enhancement
+ * Simplified without modal complexity for better performance
  */
 const ProjectCard = memo(function ProjectCard({
   title,
@@ -38,31 +38,6 @@ const ProjectCard = memo(function ProjectCard({
   technologies,
 }: ProjectCardProps) {
   const [isImageLoaded, setIsImageLoaded] = useState(false)
-  const [showImageModal, setShowImageModal] = useState(false)
-
-  // Handle escape key press to close modal
-  useEffect(() => {
-    const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && showImageModal) {
-        setShowImageModal(false)
-      }
-    }
-
-    if (showImageModal) {
-      document.addEventListener('keydown', handleEscapeKey)
-      // Prevent body scroll when modal is open
-      document.body.style.overflow = 'hidden'
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscapeKey)
-      document.body.style.overflow = 'unset'
-    }
-  }, [showImageModal])
-
-  const handleImageClick = () => {
-    setShowImageModal(true)
-  }
 
   const handleVisitProject = () => {
     window.open(url, '_blank', 'noopener,noreferrer')
@@ -90,43 +65,13 @@ const ProjectCard = memo(function ProjectCard({
         </CardHeader>
 
         <CardContent className="space-y-6">
-          {/* Enhanced Project Image with click functionality and better animations */}
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-muted group/image cursor-pointer ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-            <div 
-              className="absolute inset-0 bg-black/20 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center"
-              onClick={handleImageClick}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault()
-                  handleImageClick()
-                }
-              }}
-              tabIndex={0}
-              role="button"
-              aria-label={`View larger image of ${title}`}
-            >
-              <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 transform scale-0 group-hover/image:scale-100 transition-transform duration-300 shadow-lg">
-                <svg 
-                  className="w-6 h-6 text-gray-800" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" 
-                  />
-                </svg>
-              </div>
-            </div>
+          {/* Simplified Project Image */}
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-muted">
             <Image
               src={image.src}
               alt={image.alt}
               fill
-              className={`object-contain transition-all duration-500 group-hover/image:scale-110 ${
+              className={`object-contain transition-all duration-500 ${
                 isImageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -173,61 +118,6 @@ const ProjectCard = memo(function ProjectCard({
           </div>
         </CardContent>
       </Card>
-
-      {/* Image Modal */}
-      {showImageModal && (
-        <div 
-          className="fixed inset-0 modal-backdrop z-50 flex items-center justify-center p-4"
-          onClick={() => setShowImageModal(false)}
-          onKeyDown={(e) => {
-            if (e.key === 'Escape') {
-              setShowImageModal(false)
-            }
-          }}
-          tabIndex={-1}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Image preview modal"
-        >
-          <div 
-            className="relative max-w-4xl max-h-[90vh] w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setShowImageModal(false)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10 p-2 rounded-full hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-              aria-label="Close image preview"
-            >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <div className="relative w-full aspect-video max-h-[80vh] rounded-lg overflow-hidden shadow-2xl bg-white">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-contain"
-                sizes="90vw"
-                priority={true}
-                quality={95}
-              />
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
-              <h3 className="text-white text-xl font-bold mb-2">{title}</h3>
-              <p className="text-white/80 text-sm">{role}</p>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleVisitProject}
-                className="mt-3 bg-white/10 border-white/20 text-white hover:bg-white hover:text-black transition-colors"
-              >
-                Visit Project
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   )
 })

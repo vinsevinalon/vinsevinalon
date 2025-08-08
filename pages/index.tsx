@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import Layout from '@/components/layout'
+import ProfileAvatar from '@/components/profile-avatar'
 import { memo } from 'react'
 
 /**
@@ -17,15 +17,7 @@ const Home = memo(function Home() {
         
         {/* Profile Section */}
         <div className="flex flex-col items-center space-y-6">
-          <Avatar className="w-24 h-24 ring-2 ring-primary ring-offset-2 ring-offset-background">
-            <AvatarImage 
-              src="/earth.png" 
-              alt="Vinse Viñalon profile picture"
-              className="object-cover"
-              loading="eager"
-            />
-            <AvatarFallback className="text-xl font-semibold">VV</AvatarFallback>
-          </Avatar>
+          <ProfileAvatar size="lg" />
 
           {/* Introduction */}
           <div className="text-center space-y-4 max-w-md">

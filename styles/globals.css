@@ -180,10 +180,27 @@ button, a, [role="button"] {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced modal backdrop */
+/* Enhanced modal backdrop - responsive and centered */
 .modal-backdrop {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .modal-backdrop {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-backdrop {
+    padding: 2rem;
+  }
 }
 
 /* Image optimization */

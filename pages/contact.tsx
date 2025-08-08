@@ -1,8 +1,8 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Mail, MessageCircle } from 'lucide-react'
 import Layout from '@/components/layout'
+import ProfileAvatar from '@/components/profile-avatar'
 import { memo, useCallback } from 'react'
 
 /**
@@ -30,14 +30,7 @@ const Contact = memo(function Contact() {
         
         {/* Profile Section */}
         <div className="flex flex-col items-center space-y-6">
-          <Avatar className="w-24 h-24 ring-2 ring-primary ring-offset-2 ring-offset-background">
-            <AvatarImage 
-              src="/earth.png" 
-              alt="Vinse Viñalon profile picture"
-              className="object-cover"
-            />
-            <AvatarFallback className="text-xl font-semibold">VV</AvatarFallback>
-          </Avatar>
+          <ProfileAvatar size="lg" />
 
           <div className="text-center space-y-4">
             <div className="space-y-2">
