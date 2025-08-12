@@ -45,7 +45,7 @@ const ProjectCard = memo(function ProjectCard({
 
   return (
     <>
-      <Card className="w-full max-w-4xl mx-auto overflow-hidden group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 project-card-enter border-border/50 hover:border-primary/20">
+  <Card className="w-full max-w-4xl mx-auto overflow-hidden group hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1 project-card-enter border hover:border-primary">
         <CardHeader className="space-y-2">
           <CardTitle className="text-xl font-bold text-primary flex items-center justify-between">
             {title}
