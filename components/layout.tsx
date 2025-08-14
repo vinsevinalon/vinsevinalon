@@ -9,6 +9,7 @@ interface LayoutProps {
   keywords?: string
   canonical?: string
   ogImage?: string
+  fixedHeight?: boolean
 }
 
 /**
@@ -27,7 +28,8 @@ export default function Layout({
   description = 'Full Stack Web / Shopify Engineer based in Metro Manila, Philippines. Specializing in modern web development, e-commerce solutions, and digital experiences.',
   keywords = 'Full Stack Developer, Shopify Engineer, Web Developer, Philippines, React, Next.js, TypeScript, E-commerce',
   canonical,
-  ogImage = '/earth.png'
+  ogImage = '/earth.png',
+  fixedHeight = false
 }: LayoutProps) {
   return (
     <>
@@ -85,13 +87,13 @@ export default function Layout({
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       </Head>
       
-      <div className="min-h-screen bg-background text-foreground">
+      <div className={fixedHeight ? "h-screen bg-background text-foreground flex flex-col overflow-hidden" : "min-h-screen bg-background text-foreground"}>
         {/* Navigation at the top */}
-        <header className="container mx-auto px-4 pt-8">
+        <header className={`container mx-auto px-4 pt-8 ${fixedHeight ? 'flex-shrink-0' : ''}`}>
           <Navigation />
         </header>
         
-        <main className="container mx-auto px-4 py-8">
+        <main className={`container mx-auto px-4 py-8 ${fixedHeight ? 'flex-1 overflow-hidden' : ''}`}>
           {children}
         </main>
       </div>

@@ -25,8 +25,9 @@ const Contact = memo(function Contact() {
     <Layout 
       title="Vinse Viñalon - Contact"
       description="Get in touch with Vinse Viñalon for web development projects, Shopify development, or collaboration opportunities. Based in Metro Manila, Philippines."
+      fixedHeight={true}
     >
-      <div className="flex flex-col items-center justify-center min-h-[80vh] space-y-12">
+      <div className="flex flex-col items-center justify-center h-full space-y-12">
         
         {/* Profile Section */}
         <div className="flex flex-col items-center space-y-6">

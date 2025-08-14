@@ -12,8 +12,9 @@ const Home = memo(function Home() {
     <Layout 
       title="Vinse Viñalon - Full Stack Web Developer"
       description="Hi, I'm Vinse Viñalon, a Full Stack Web / Shopify Engineer based in Metro Manila, Philippines. Specializing in modern web development and e-commerce solutions."
+      fixedHeight={true}
     >
-      <div className="flex flex-col items-center justify-center min-h-[80vh] space-y-8">
+      <div className="flex flex-col items-center justify-center h-full space-y-8">
         
         {/* Profile Section */}
         <div className="flex flex-col items-center space-y-6">
