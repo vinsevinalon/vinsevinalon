@@ -1,5 +1,7 @@
+"use client"
+
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import { Github, Linkedin, ExternalLink } from 'lucide-react'
 import {
   NavigationMenu,
@@ -13,6 +15,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
+import { memo, useCallback } from 'react'
 
 const navigationItems = [
   { href: '/', label: 'ABOUT' },
@@ -43,10 +46,8 @@ const socialLinks = [
  * Features: Memoization, lazy loading, and efficient re-rendering
  * Uses ShadCN UI components for consistent styling and better UX
  */
-import { memo, useCallback } from 'react'
-
 const Navigation = memo(function Navigation() {
-  const router = useRouter()
+  const pathname = usePathname()
 
   /**
    * Optimized external link handler with security measures and performance optimization
@@ -63,24 +64,23 @@ const Navigation = memo(function Navigation() {
         <NavigationMenuList>
           {navigationItems.map((item) => (
             <NavigationMenuItem key={item.href}>
-              <Link href={item.href} legacyBehavior passHref>
-                <NavigationMenuLink 
+              <NavigationMenuLink asChild>
+                <Link
+                  href={item.href}
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    router.pathname === item.href && 'bg-accent text-accent-foreground',
+                    pathname === item.href && 'bg-accent text-accent-foreground',
                     'text-xs font-medium tracking-wider'
                   )}
                 >
                   {item.label}
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-
       <Separator className="w-24" />
-
       {/* Social Links */}
       <div className="flex items-center space-x-4" role="group" aria-label="Social media links">
         {socialLinks.map((social) => {
@@ -100,7 +100,7 @@ const Navigation = memo(function Navigation() {
         })}
       </div>
     </nav>
-  )
+  );
 })
 
 export default Navigation

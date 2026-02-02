@@ -1,7 +1,9 @@
+"use client"
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Mail, MessageCircle } from 'lucide-react'
-import Layout from '@/components/layout'
+import PageLayout from '@/components/page-layout'
 import ProfileAvatar from '@/components/profile-avatar'
 import { memo, useCallback } from 'react'
 
@@ -22,11 +24,7 @@ const Contact = memo(function Contact() {
   }, [])
 
   return (
-    <Layout 
-      title="Vinse Viñalon - Contact"
-      description="Get in touch with Vinse Viñalon for web development projects, Shopify development, or collaboration opportunities. Based in Metro Manila, Philippines."
-      fixedHeight={true}
-    >
+    <PageLayout fixedHeight={true}>
       <div className="flex flex-col items-center justify-center h-full space-y-12">
         
         {/* Profile Section */}
@@ -102,7 +100,7 @@ const Contact = memo(function Contact() {
           }}
         />
       </div>
-    </Layout>
+    </PageLayout>
   )
 })
 

@@ -1,5 +1,7 @@
+"use client"
+
 import { Separator } from '@/components/ui/separator'
-import Layout from '@/components/layout'
+import PageLayout from '@/components/page-layout'
 import ProjectCard from '@/components/project-card'
 import { memo, useMemo, useEffect, useState } from 'react'
 
@@ -148,7 +150,7 @@ const projects = [
  * Features: Memoization, lazy loading, virtual scrolling considerations
  * Uses lazy loading and performance optimizations for better UX
  */
-const Works = memo(function Works() {
+export default function Works() {
   const [isLoaded, setIsLoaded] = useState(false)
 
   // Trigger animation after component mounts
@@ -161,11 +163,7 @@ const Works = memo(function Works() {
     return projects.map((project, index) => (
       <div 
         key={project.title} 
-        className={`space-y-8 transition-all duration-700 ${
-          isLoaded 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-8'
-        }`}
+        className={`space-y-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         style={{
           transitionDelay: `${index * 100}ms`
         }}
@@ -191,17 +189,10 @@ const Works = memo(function Works() {
   }, [isLoaded])
 
   return (
-    <Layout 
-      title="Vinse Viñalon - Works & Portfolio"
-      description="Explore my comprehensive portfolio including Shopify development, full-stack applications, creative platforms, and digital marketing solutions. Professional projects spanning e-commerce, social platforms, travel, and creative industries."
-    >
+    <PageLayout>
       <div className="space-y-12">
         {/* Header */}
-        <div className={`text-center space-y-6 transition-all duration-1000 ${
-          isLoaded 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 -translate-y-4'
-        }`}>
+        <div className={`text-center space-y-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
           <h1 className="text-4xl font-bold text-primary tracking-tight">WORKS</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A curated collection of my professional projects spanning e-commerce, social platforms, 
@@ -214,22 +205,7 @@ const Works = memo(function Works() {
         <div className="space-y-16">
           {projectElements}
         </div>
-
-        {/* Performance optimizations */}
-        <div className="sr-only">
-          {/* Preload critical project images */}
-          <link rel="preload" href="/assets/highminds.png" as="image" />
-          <link rel="preload" href="/assets/kumu.png" as="image" />
-          <link rel="preload" href="/assets/theclothing.png" as="image" />
-          <link rel="preload" href="/assets/biyaheroes.png" as="image" />
-          <link rel="preload" href="/assets/blumr.png" as="image" />
-          <link rel="preload" href="/assets/crimson.png" as="image" />
-          <link rel="preload" href="/assets/distort.png" as="image" />
-          <link rel="preload" href="/assets/auggiefontanilla.png" as="image" />
-        </div>
       </div>
-    </Layout>
+    </PageLayout>
   )
-})
-
-export default Works
+}

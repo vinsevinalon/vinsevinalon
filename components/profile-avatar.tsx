@@ -1,4 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback } from '@/components/ui/avatar'
+import Image from 'next/image'
 import { memo } from 'react'
 
 interface ProfileAvatarProps {
@@ -22,12 +23,16 @@ const ProfileAvatar = memo(function ProfileAvatar({
 
   return (
     <Avatar className={`${sizeClasses[size]} ring-2 ring-primary ring-offset-2 ring-offset-background ${className}`}>
-      <AvatarImage 
-        src="/earth.png" 
-        alt="Vinse Viñalon profile picture"
-        className="object-cover"
-        loading="eager"
-      />
+      <div className="relative w-full h-full">
+        <Image
+          src="/earth.png"
+          alt="Vinse Viñalon profile picture"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+        />
+      </div>
       <AvatarFallback className="text-xl font-semibold">VV</AvatarFallback>
     </Avatar>
   )

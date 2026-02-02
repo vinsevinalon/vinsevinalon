@@ -1,19 +1,9 @@
-import Layout from '@/components/layout'
+import PageLayout from '@/components/page-layout'
 import ProfileAvatar from '@/components/profile-avatar'
-import { memo } from 'react'
 
-/**
- * Highly optimized Homepage component with improved performance and accessibility
- * Features: Memoization, optimized images, and efficient re-rendering
- * Uses Next.js Image optimization and ShadCN UI components
- */
-const Home = memo(function Home() {
+export default function Home() {
   return (
-    <Layout 
-      title="Vinse Viñalon - Full Stack Web Developer"
-      description="Hi, I'm Vinse Viñalon, a Full Stack Web / Shopify Engineer based in Metro Manila, Philippines. Specializing in modern web development and e-commerce solutions."
-      fixedHeight={true}
-    >
+    <PageLayout fixedHeight={true}>
       <div className="flex flex-col items-center justify-center h-full space-y-8">
         
         {/* Profile Section */}
@@ -37,15 +27,7 @@ const Home = memo(function Home() {
             </p>
           </div>
         </div>
-
-        {/* Performance optimizations */}
-        <div className="sr-only">
-          {/* Preload critical images */}
-          <link rel="preload" href="/earth.png" as="image" />
-        </div>
       </div>
-    </Layout>
+    </PageLayout>
   )
-})
-
-export default Home
+}
