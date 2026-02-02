@@ -1,0 +1,21 @@
+{
+  "name": "Vinse Viñalon - Portfolio",
+  "short_name": "VV Portfolio",
+  "description": "Full Stack Web / Shopify Engineer based in Metro Manila, Philippines",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en-US",
+  "scope": "/",
+  "prefer_related_applications": false
+}
