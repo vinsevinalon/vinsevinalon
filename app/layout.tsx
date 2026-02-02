@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Metadata } from 'next'
+import ComingSoon from '@/components/coming-soon'
 
 export const metadata: Metadata = {
   title: 'Vinse Viñalon - Full Stack Web / Shopify Engineer',
@@ -33,6 +34,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://vinsevinalon.com'),
 }
 
+export const dynamic = 'force-dynamic'
+
+const isComingSoonActive = process.env.COMING_SOON === 'true'
+
 export default function RootLayout({
   children,
 }: {
@@ -45,7 +50,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body>
-        {children}
+        {isComingSoonActive ? <ComingSoon /> : children}
         <Analytics />
         <SpeedInsights />
       </body>
